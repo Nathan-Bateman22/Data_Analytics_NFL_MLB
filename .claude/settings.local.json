@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(pip show *)",
+      "Bash(export PATH=\"$HOME/.local/bin:$PATH\")",
+      "Bash(uv run *)",
+      "Bash(curl -s http://localhost:8000/api/mariners/roster/)",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s \"https://site.api.espn.com/apis/common/v3/sports/baseball/mlb/athletes/41044/splits?season=2025&seasontype=2\")",
+      "Bash(curl -s \"https://site.api.espn.com/apis/common/v3/sports/baseball/mlb/athletes/35124/splits?season=2025&seasontype=2\")",
+      "Bash(curl -s \"https://site.api.espn.com/apis/common/v3/sports/baseball/mlb/athletes/40939/splits?season=2025&seasontype=2\")",
+      "Bash(curl -s \"https://site.api.espn.com/apis/common/v3/sports/baseball/mlb/athletes/41292/splits?season=2025&seasontype=2\")",
+      "Bash(curl -s \"https://site.api.espn.com/apis/common/v3/sports/baseball/mlb/athletes/41044/splits?season=2022&seasontype=2\")",
+      "Bash(curl -s http://localhost:8000/api/mariners/players/35124/stats/)",
+      "Bash(curl -s http://localhost:8000/api/mariners/players/40939/stats/)",
+      "Bash(curl -s http://localhost:8000/api/mariners/players/41292/stats/)",
+      "Bash(curl -s http://localhost:8000/api/kraken/roster/)",
+      "Bash(curl -s \"https://site.api.espn.com/apis/common/v3/sports/hockey/nhl/athletes/4781552/splits?season=2025&seasontype=2\")",
+      "Bash(curl -s \"https://site.api.espn.com/apis/common/v3/sports/hockey/nhl/athletes/3942073/splits?season=2025&seasontype=2\")",
+      "Bash(curl -s \"https://site.api.espn.com/apis/common/v3/sports/hockey/nhl/athletes/2562610/splits?season=2025&seasontype=2\")",
+      "Bash(curl -s \"https://site.api.espn.com/apis/common/v3/sports/hockey/nhl/athletes/5032/splits?season=2025&seasontype=2\")",
+      "Bash(curl -s \"https://site.api.espn.com/apis/common/v3/sports/hockey/nhl/athletes/4781552/splits?season=2026&seasontype=2\")"
+    ]
+  }
+}

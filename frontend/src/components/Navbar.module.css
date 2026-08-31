@@ -1,0 +1,95 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 64px;
+  background: rgba(8, 12, 20, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.brandText {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: var(--text);
+}
+
+.brandSub {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color var(--transition), background var(--transition);
+}
+
+.link:hover {
+  color: var(--text);
+  background: rgba(255,255,255,0.05);
+}
+
+.active {
+  color: var(--text) !important;
+  background: rgba(255,255,255,0.07) !important;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.activeSeahawks {
+  color: var(--seahawks-green) !important;
+  background: rgba(105, 190, 40, 0.1) !important;
+}
+
+.activeMariners {
+  color: var(--mariners-silver) !important;
+  background: rgba(0, 92, 92, 0.2) !important;
+}
+
+.activeKraken {
+  color: #99D9D9 !important;
+  background: rgba(153, 217, 217, 0.1) !important;
+}
+
+.activeAnalytics {
+  color: #69BE28 !important;
+  background: rgba(105, 190, 40, 0.1) !important;
+}
+
+@media (max-width: 600px) {
+  .nav { padding: 0 16px; }
+  .brandSub { display: none; }
+  .link { padding: 7px 10px; font-size: 13px; }
+}

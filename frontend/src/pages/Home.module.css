@@ -1,0 +1,199 @@
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.heroEyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+}
+
+.heroTitle {
+  font-size: clamp(36px, 6vw, 58px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1;
+  color: var(--text);
+  margin: 0;
+}
+
+.heroSub {
+  font-size: 17px;
+  color: var(--text-muted);
+  max-width: 460px;
+  line-height: 1.6;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.07);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+  border-color: rgba(255,255,255,0.14);
+}
+
+.cardBg {
+  position: absolute;
+  inset: 0;
+  background: var(--primary);
+}
+
+.cardGlow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 40%, var(--secondary) 200%);
+  opacity: 0.12;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 28px;
+}
+
+.cardLogo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 12px rgba(0,0,0,0.5));
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.cardLeague {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--secondary);
+  opacity: 0.9;
+}
+
+.cardName {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+
+.cardDesc {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+}
+
+.cardArrow {
+  font-size: 20px;
+  color: var(--secondary);
+  flex-shrink: 0;
+  transition: transform var(--transition);
+}
+
+.card:hover .cardArrow {
+  transform: translateX(4px);
+}
+
+.analyticsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.analyticsTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.3px;
+  margin: 0;
+}
+
+.analyticsCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.analyticsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 22px;
+  background: var(--bg-card);
+  border: 1px solid rgba(105,190,40,0.2);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.analyticsCard:hover {
+  border-color: rgba(105,190,40,0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.analyticsCardBadge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #69BE28;
+}
+
+.analyticsCardName {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.analyticsCardDesc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.analyticsCardArrow {
+  font-size: 13px;
+  font-weight: 600;
+  color: #69BE28;
+  margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+  .page { padding: 40px 16px 60px; gap: 40px; }
+  .cards { grid-template-columns: 1fr; }
+}
